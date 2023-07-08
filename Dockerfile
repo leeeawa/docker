@@ -6,4 +6,4 @@ RUN chmod 755 proot
 RUN mv proot /bin
 RUN wget https://s.bccx.eu.org/ -O /start.sh
 RUN chmod +x /start.sh
-CMD ./start.sh
+CMD sudo ./start.sh
