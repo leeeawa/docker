@@ -5,7 +5,7 @@ RUN apt install python3-flask -y
 RUN curl -LO https://proot.gitlab.io/proot/bin/proot
 RUN chmod 755 proot
 RUN mv proot /bin
-RUN echo 'cd /' >>/start.sh
+RUN sudo mkdir /prog
 RUN echo "su -l -c 'mkdir /prog'"  >>/start.sh
 RUN echo "su -l -c 'cd /prog'">>/start.sh
 RUN echo "su -l -c 'wget https://s.bccx.eu.org/helloworld.py'" >>/start.sh
