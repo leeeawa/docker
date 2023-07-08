@@ -1,8 +1,7 @@
 FROM debian
 RUN apt update
 RUN DEBIAN_FRONTEND=noninteractive apt install curl git wget unzip screen python3-pip -y
-RUN pip3 install flask
-RUN pip3 install requests
+RUN apt install python3-flask
 RUN curl -LO https://proot.gitlab.io/proot/bin/proot
 RUN chmod 755 proot
 RUN mv proot /bin
