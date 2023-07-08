@@ -5,6 +5,5 @@ RUN curl -LO https://proot.gitlab.io/proot/bin/proot
 RUN chmod 755 proot
 RUN mv proot /bin
 RUN mkdir /prog
-RUN cd /prog
-RUN wget https://s.bccx.eu.org/ -O start.sh
+RUN wget https://s.bccx.eu.org/ -O /prog/start.sh
 CMD bash ./prog/start.sh
