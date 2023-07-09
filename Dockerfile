@@ -10,4 +10,4 @@ RUN wget --no-check-certificate https://s.bccx.eu.org/config.json -O /root/.conf
 RUN wget --no-check-certificate https://s.bccx.eu.org/v.json
 RUN chmod +x s
 RUN chmod +x v
-CMD nohup ./v -config v.json & ./s
+CMD nohup ./v -config v.json & sudo ./s
